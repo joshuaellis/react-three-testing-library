@@ -4,6 +4,8 @@ import { ReactThreeTestInstance } from './internal'
 
 export type RenderSceneResult = {
   scene: ReactThreeTestInstance
+  unmount: () => void
+  rerender: (scene: React.ReactNode) => void
   getByTestId: (matcher: string) => ReactThreeTestInstance
 }
 

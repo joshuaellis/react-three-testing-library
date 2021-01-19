@@ -1,4 +1,4 @@
-import TestRenderer from 'react-test-renderer'
+import TestRenderer, { act, ReactTestRenderer } from 'react-test-renderer'
 
 import { getQueriesForScene } from '../helpers/getQueriesForScene'
 
@@ -7,15 +7,25 @@ import { RenderSceneOptions, RenderSceneResult } from '../types'
 import { testHarness } from './testHarness'
 
 const renderScene = (
-  scene: React.ReactNode,
+  scene: React.ReactElement,
   options: RenderSceneOptions = {}
 ): RenderSceneResult => {
-  const renderer = TestRenderer.create(testHarness(scene, options.canvasProps))
+  let renderer: ReactTestRenderer | null = null
 
-  const renderedScene = renderer.toTree()!.props.children
+  act(() => {
+    renderer = TestRenderer.create(testHarness(scene, options.canvasProps))
+  })
+
+  const renderedScene = renderer!.toTree()!.props.children
 
   return {
     scene: renderedScene,
+    unmount: () => renderer!.unmount(),
+    rerender: (renderScene: React.ReactElement) => {
+      act(() => {
+        renderer!.update(renderScene)
+      })
+    },
     ...getQueriesForScene(renderedScene)
   } as RenderSceneResult
 }
