@@ -8,6 +8,7 @@ const config = {
     '^.+\\.(ts|tsx)?$': 'ts-jest',
     '^.+\\.(js|jsx)$': 'babel-jest'
   },
+  setupFilesAfterEnv: ['./tests/setup-env.ts'],
   coveragePathIgnorePatterns: ['<rootDir>/node_modules/'],
   coverageThreshold: {
     global: {

@@ -13,7 +13,8 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": "./src",
     "preserveWatchOutput": true,
-    "outDir": "lib"
+    "outDir": "lib",
+    "noImplicitThis": false
   },
   "include": ["./src/**/*"],
   "exclude": ["./node_modules/**/*"]

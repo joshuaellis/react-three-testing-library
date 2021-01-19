@@ -13,7 +13,7 @@ describe('react-three-testing-library', () => {
         <meshBasicMaterial />
         <mesh>
           <boxBufferGeometry args={[1, 1, 1]} />
-          <meshBasicMaterial data-testid="mesh" />
+          <meshBasicMaterial data-testid="material" />
         </mesh>
       </mesh>
     )
