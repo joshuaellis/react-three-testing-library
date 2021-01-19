@@ -1,6 +1,21 @@
 import { ReactThreeTestInstance } from '../types/internal'
 
-// const hasProp = (node: ReactThreeTestInstance, prop: string, value: string) =>
-//   node.props[prop] === value
+import { PrimitiveTypeError } from './errors'
 
-// const
+const checkNode = (
+  node: ReactThreeTestInstance,
+  types: string[],
+  ...args: any[]
+) => {
+  const checks = types.map((t) => node.type === t)
+
+  if (!checks.includes(true)) {
+    throw new PrimitiveTypeError(
+      node,
+      types,
+      ...(args as [any, jest.MatcherContext])
+    )
+  }
+}
+
+export { checkNode }

@@ -1,9 +1,13 @@
 import { toBeType } from './toBeType'
+import { toHaveMaterial } from './toHaveMaterial'
 
-declare namespace jest {
-  interface Matchers<R, T> {
-    toBeType: (type: string) => R
+declare global {
+  namespace jest {
+    interface Matchers<R> {
+      toBeType: (type: string) => R
+      toHaveMaterial: (type?: string) => R
+    }
   }
 }
 
-expect.extend({ toBeType })
+expect.extend({ toBeType, toHaveMaterial })

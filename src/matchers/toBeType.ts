@@ -1,6 +1,6 @@
 import { ReactThreeTestInstance } from 'types/internal'
 
-function toBeType(node: ReactThreeTestInstance, type: string) {
+function toBeType (node: ReactThreeTestInstance, type: string) {
   const isType = node.type === type
   return {
     pass: isType,

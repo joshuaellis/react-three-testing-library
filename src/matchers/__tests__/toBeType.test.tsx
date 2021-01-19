@@ -3,7 +3,7 @@ import * as React from 'react'
 import { renderScene } from '../../index'
 
 describe('toBeType matcher', () => {
-  const renderTestByIdScene = () => (
+  const renderToBeTypeScene = () => (
     <mesh>
       <boxBufferGeometry args={[1, 1, 1]} />
       <meshBasicMaterial />
@@ -15,13 +15,13 @@ describe('toBeType matcher', () => {
   )
 
   it('should return true if the type exists', () => {
-    const { getByTestId } = renderScene(renderTestByIdScene())
+    const { getByTestId } = renderScene(renderToBeTypeScene())
 
     expect(getByTestId('material')).toBeType('meshBasicMaterial')
   })
 
   it('should return false if the type does not exist', () => {
-    const { getByTestId } = renderScene(renderTestByIdScene())
+    const { getByTestId } = renderScene(renderToBeTypeScene())
 
     const res = () =>
       expect(getByTestId('material')).toBeType('boxBufferGeometry')
