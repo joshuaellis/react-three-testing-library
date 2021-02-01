@@ -5,24 +5,24 @@ import { Vector3 } from 'three'
 import { renderScene } from '../index'
 
 describe('react-three-testing-library', () => {
-  it("should render a scene", () => {
-    const position = new Vector3(1, 1, 1)
+  // it("should render a scene", () => {
+  //   const position = new Vector3(1, 1, 1)
 
-    const { scene } = renderScene(
-      <mesh position={position}>
-        <boxBufferGeometry args={[1, 1, 1]} />
-        <meshBasicMaterial />
-        <mesh>
-          <boxBufferGeometry args={[1, 1, 1]} />
-          <meshBasicMaterial userData={{
-            testId: 'material'
-          }} />
-        </mesh>
-      </mesh>
-    )
+  //   const { scene } = renderScene(
+  //     <mesh position={position}>
+  //       <boxBufferGeometry args={[1, 1, 1]} />
+  //       <meshBasicMaterial />
+  //       <mesh>
+  //         <boxBufferGeometry args={[1, 1, 1]} />
+  //         <meshBasicMaterial userData={{
+  //           testId: 'material'
+  //         }} />
+  //       </mesh>
+  //     </mesh>
+  //   )
 
-    expect(scene).toBeTruthy()
-  })
+  //   expect(scene).toBeTruthy()
+  // })
 
   const TestComponent = () => {
     const geomRef = React.useRef<THREE.BoxBufferGeometry>(null!)
