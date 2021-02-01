@@ -40,8 +40,6 @@ const findProp = (
       )
       .filter((bool: boolean) => Boolean(bool))
 
-    console.log(childrenResults)
-
     if (childrenResults.length > 1) {
       throw getMultipleElementsFoundError(
         `Found multiple ${prop} props, there should only be one.`
