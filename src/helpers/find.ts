@@ -8,13 +8,32 @@ const findAll = (
 ) => {
   let results: ReactThreeTestInstance[] = []
 
-  if (checker(node)) {
-    results.push(node)
-  }
-
-  node.props.children?.forEach((child: ReactThreeTestInstance) => {
-    results.push.apply(results, findAll(child, checker))
+  const res = node.findAll((node) => {
+   console.log(node.children)
+    // if(node.props.renderer && node.props.container){
+    //   console.log(node.children)
+    // }
+    // return 'mesh' === node.props.testId
+    return false
   })
+
+  console.log('RES',res)
+
+  // if (checker(node)) {
+  //   results.push(node)
+  // }
+
+  // console.log('PROPS CHILDREN',node.props.children)
+
+  // node.props.children.forEach((child: any) => {
+  //   if (typeof child === 'string') {
+  //     console.log('FINDALL',child)
+  //     return;
+  //   }
+  //   console.log(child)
+  //   console.log(child.props)
+  //   results.push.apply(results, findAll(child, checker))
+  // })
 
   return results
 }

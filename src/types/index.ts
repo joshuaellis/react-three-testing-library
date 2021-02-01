@@ -1,14 +1,11 @@
-import { CanvasProps } from 'react-three-fiber'
-
-import { ReactThreeTestInstance } from './internal'
+import { ReactThreeTestInstance, TestHarnessCanvasProps, Queries } from './internal'
 
 export type RenderSceneResult = {
   scene: ReactThreeTestInstance
   unmount: () => void
-  rerender: (scene: React.ReactNode) => void
-  getByTestId: (matcher: string) => ReactThreeTestInstance
-}
+  rerender: (scene: React.ReactElement) => void
+} & Queries
 
 export type RenderSceneOptions = {
-  canvasProps?: CanvasProps
+  canvasProps?: TestHarnessCanvasProps
 }

@@ -1,42 +1,60 @@
 import React from 'react'
-import TestRenderer, { act, ReactTestRenderer } from 'react-test-renderer'
+import TestRenderer, { ReactTestRenderer } from 'react-test-renderer'
 
 import { getQueriesForScene } from '../helpers/getQueriesForScene'
 
-import { RenderSceneOptions, RenderSceneResult } from '../types'
+import {
+  RenderSceneOptions,
+  RenderSceneResult,
+} from '../types'
+import {TestHarnessCanvasProps} from '../types/internal'
 
 import { testHarness } from './testHarness'
 
-const renderScene = (scene: any, options: RenderSceneOptions = {}) => {
-  let renderer: ReactTestRenderer | null = null
+import createContext from 'gl'
 
-  act(() => {
-    renderer = TestRenderer.create(testHarness(scene), {
-      createNodeMock: (el) => {
-        return {
-          ...el,
-          addEventListener: () => null,
-          removeEventListener: () => null
-        }
-      }
-    })
-  })
+const renderScene = (
+  scene: React.ReactElement,
+  { canvasProps }: RenderSceneOptions = {}
+) => {
+  const renderer = renderWithAct(scene, canvasProps)
 
-  const renderedScene = renderer!.toJSON()
+  const renderedScene = renderer.root
 
-  //@ts-expect-error
-  console.log(renderedScene!.children[0].props)
+  // console.log(getQueriesForScene(renderedScene))
 
   return {
     scene: renderedScene,
     unmount: () => renderer!.unmount(),
     rerender: (renderScene: React.ReactElement) => {
-      act(() => {
+      TestRenderer.act(() => {
         renderer!.update(renderScene)
       })
-    }
-    // ...getQueriesForScene(renderedScene)
-  }
+    },
+    ...getQueriesForScene(renderedScene)
+  } as RenderSceneResult
+}
+
+const renderWithAct = (
+  scene: React.ReactElement,
+  canvasProps: TestHarnessCanvasProps = {}
+): ReactTestRenderer => {
+  let renderer: ReactTestRenderer = TestRenderer.create(testHarness(scene, canvasProps), {
+    createNodeMock: (el) => ({
+      ...el,
+      width: 1280,
+      height: 800,
+      style: {},
+      getContext: () => {
+        const context = createContext(1280, 800)
+        return context
+      },
+      addEventListener: () => null,
+      removeEventListener: () => null
+    })
+  })
+
+  return (renderer as unknown) as ReactTestRenderer
 }
 
 export { renderScene }

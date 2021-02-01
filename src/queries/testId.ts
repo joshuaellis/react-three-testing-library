@@ -3,11 +3,11 @@ import { queryAllByProp, buildQueries } from '../helpers/queryHelpers'
 const TYPE = 'testid'
 const PROP = `data-${TYPE}`
 
-const queryAllByTestId = queryAllByProp(PROP)
+const getAllByTestId = queryAllByProp(PROP)
 
 const getMultipleError = (id: string): string =>
   `Found multiple elements with the ${TYPE} of: ${id}`
 
-const [getByTestId] = buildQueries(queryAllByTestId, getMultipleError)
+const [getByTestId] = buildQueries(getAllByTestId, getMultipleError)
 
-export { queryAllByTestId, getByTestId }
+export { getAllByTestId, getByTestId }

@@ -1,12 +1,13 @@
 import * as React from 'react'
-import { Canvas, CanvasProps } from 'react-three-fiber'
-import ObserverPolyfill from 'resize-observer-polyfill'
+import { Canvas } from 'react-three-fiber'
+
+import {TestHarnessCanvasProps} from '../types/internal'
 
 const testHarness = (
   scene: React.ReactNode,
-  canvasProps: Omit<CanvasProps, 'children'> = {}
+  canvasProps: TestHarnessCanvasProps
 ) => (
-  <Canvas resize={{ polyfill: ObserverPolyfill }} {...canvasProps}>
+  <Canvas {...canvasProps}>
     {scene}
   </Canvas>
 )
