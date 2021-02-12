@@ -29,7 +29,7 @@
     "react-three-fiber": ">=5.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.13",
+    "@babel/core": "^7.12.16",
     "@babel/plugin-transform-modules-commonjs": "^7.12.1",
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
