@@ -33,7 +33,7 @@
     "@babel/plugin-transform-modules-commonjs": "^7.12.1",
     "@babel/preset-env": "^7.12.16",
     "@babel/preset-react": "^7.12.13",
-    "@babel/preset-typescript": "^7.12.16",
+    "@babel/preset-typescript": "^7.12.17",
     "@types/gl": "^4.1.0",
     "@types/jest": "^26.0.20",
     "@types/react": "^17.0.2",
