@@ -52,7 +52,7 @@
     "prettier": "^2.2.1",
     "react": "^17.0.1",
     "react-test-renderer": "^17.0.1",
-    "react-three-fiber": "^5.3.18",
+    "react-three-fiber": "^5.3.19",
     "three": "^0.125.2",
     "ts-jest": "^26.5.1",
     "ts-node": "^9.1.1",
