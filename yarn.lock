@@ -4516,10 +4516,10 @@ react-three-fiber@^6.0.0-alpha.9:
     utility-types "^3.10.0"
     zustand "^3.3.3"
 
-react-three-test-renderer@^6.0.0-alpha.2:
-  version "6.0.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/react-three-test-renderer/-/react-three-test-renderer-6.0.0-alpha.2.tgz#d4d450d05a3aef4ca7f5676e5fad474b1cf7305f"
-  integrity sha512-5OKTZwKxV66y8f57DyXmglMaFq/3+4rOvB1ataKwbC7xRUh+JqR74KT17BkE14cv3tZk7cVFg7Dv3NM0uJ105g==
+react-three-test-renderer@^6.0.0-alpha.3:
+  version "6.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/react-three-test-renderer/-/react-three-test-renderer-6.0.0-alpha.3.tgz#e83f90ea7ed69ca0221ac85df46564ae0c5629da"
+  integrity sha512-0suMP7lznyevI+/Jl01EWHtxjIZfuz5LHG8ag8ikjhmpO9iX5DmO4uSgjgjUj+oiQzpIQ853rJpk4BQs4g+SDw==
   dependencies:
     zustand "^3.3.3"
 
