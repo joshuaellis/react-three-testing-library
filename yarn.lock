@@ -905,17 +905,10 @@
     "@babel/helper-validator-option" "^7.12.17"
     "@babel/plugin-transform-typescript" "^7.13.0"
 
-"@babel/runtime@^7.13.9":
+"@babel/runtime@^7.13.9", "@babel/runtime@^7.8.4":
   version "7.13.10"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.10.tgz#47d42a57b6095f4468da440388fdbad8bebf0d7d"
   integrity sha512-4QPkjJq6Ns3V/RgpEahRk+AGfL0eO6RHHtTWoNNr5mO49G6B5+X6d6THgWEAvTrznU5xYpbAlVKRYcsCgh/Akw==
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.8.4":
-  version "7.12.5"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
-  integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -4508,10 +4501,10 @@ react-reconciler@0.26.1:
     object-assign "^4.1.1"
     scheduler "^0.20.1"
 
-react-three-fiber@^6.0.0-alpha.9:
-  version "6.0.0-alpha.9"
-  resolved "https://registry.yarnpkg.com/react-three-fiber/-/react-three-fiber-6.0.0-alpha.9.tgz#4951efc939530c154c3b03c7244eb7c72a88ba7f"
-  integrity sha512-x0CGcp3uBBmgnKxWrDwm/0XgpzqYFax8tExHfwvMFRbzspt0MU/Cr0id6EvnFWUOn2P3xfTKzdGvRHrYT1F53w==
+react-three-fiber@^6.0.0-alpha.10:
+  version "6.0.0-alpha.10"
+  resolved "https://registry.yarnpkg.com/react-three-fiber/-/react-three-fiber-6.0.0-alpha.10.tgz#dc22794b145fb29a245a083ae75c8ba3c721fcac"
+  integrity sha512-2RTsPscG95wfXMygdHKnQeA3ZAX34nUbxjhh56rAEt8rZCFN7sonZ8lz3hVCw8wYCRv9K31C1xXgo7UAw+8+sw==
   dependencies:
     "@babel/runtime" "^7.13.9"
     react-merge-refs "^1.1.0"
