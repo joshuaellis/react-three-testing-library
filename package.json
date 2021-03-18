@@ -32,7 +32,7 @@
     "@babel/preset-env": "^7.13.10",
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.13.0",
-    "@types/jest": "^26.0.20",
+    "@types/jest": "^26.0.21",
     "@types/react": "^17.0.3",
     "@types/react-test-renderer": "^17.0.1",
     "@types/three": "^0.126.1",
