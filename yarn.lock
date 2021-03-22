@@ -4501,10 +4501,10 @@ react-reconciler@0.26.1:
     object-assign "^4.1.1"
     scheduler "^0.20.1"
 
-react-three-fiber@^6.0.0-alpha.10:
-  version "6.0.0-alpha.10"
-  resolved "https://registry.yarnpkg.com/react-three-fiber/-/react-three-fiber-6.0.0-alpha.10.tgz#dc22794b145fb29a245a083ae75c8ba3c721fcac"
-  integrity sha512-2RTsPscG95wfXMygdHKnQeA3ZAX34nUbxjhh56rAEt8rZCFN7sonZ8lz3hVCw8wYCRv9K31C1xXgo7UAw+8+sw==
+react-three-fiber@^6.0.0-alpha.11:
+  version "6.0.0-alpha.11"
+  resolved "https://registry.yarnpkg.com/react-three-fiber/-/react-three-fiber-6.0.0-alpha.11.tgz#fa814fd51954a4211eb6c69ef543c03bd952a389"
+  integrity sha512-XIC1HWEDfECOnSJcEyDyK2boC0T+llnOAtJ6NQFvZkO2MphaO8Sfk0C8S+j7V8twscbBaTmsPabgix6940XgcA==
   dependencies:
     "@babel/runtime" "^7.13.9"
     react-merge-refs "^1.1.0"
