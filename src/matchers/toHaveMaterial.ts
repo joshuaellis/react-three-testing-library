@@ -1,9 +1,9 @@
-import { ReactThreeTestInstance } from '../types/internal'
+import { ReactThreeTestInstance } from 'types/internal'
 
-import { findProp } from '../helpers/find'
-import { checkNode } from '../helpers/matcherHelpers'
+import { findProp } from 'helpers/find'
+import { checkNode } from 'helpers/matcherHelpers'
 
-function toHaveMaterial (node: ReactThreeTestInstance, type?: string) {
+function toHaveMaterial(node: ReactThreeTestInstance, type?: string) {
   checkNode(node, ['mesh', 'instancedMesh'], toHaveMaterial, this)
 
   const hasMaterial = findProp(node, 'material', type)
@@ -20,9 +20,9 @@ function toHaveMaterial (node: ReactThreeTestInstance, type?: string) {
         ),
         '',
         `Received element ${has} have material ${type ? `: ${type}` : ''}:`,
-        `  ${this.utils.printReceived(node)}`
+        `  ${this.utils.printReceived(node)}`,
       ].join('\n')
-    }
+    },
   }
 }
 

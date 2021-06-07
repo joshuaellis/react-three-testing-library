@@ -1,6 +1,6 @@
-import { ReactThreeTestInstance } from '../types/internal'
+import { ReactThreeTestInstance } from 'types/internal'
 
-import * as defaultQueries from '../queries'
+import * as defaultQueries from 'queries/index'
 
 const getQueriesForScene = (
   sceneTree: ReactThreeTestInstance,

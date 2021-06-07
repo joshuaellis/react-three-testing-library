@@ -1,14 +1,10 @@
-import { CanvasProps } from 'react-three-fiber'
-import { ReactTestInstance } from 'react-test-renderer'
-
-export type ReactThreeTestInstance = ReactTestInstance
-
-export type TestHarnessCanvasProps = Omit<CanvasProps, 'children'>
+import type { ReactThreeTest } from '@react-three/test-renderer'
 
 interface GetByAPI {
-    getAllByTestId: (testId: string) => ReactThreeTestInstance[]
-    getByTestId: (testId: string) => ReactThreeTestInstance
+  getAllByTestId: (testId: string) => ReactThreeTest.ReactThreeTestInstance[]
+  getByTestId: (testId: string) => ReactThreeTest.ReactThreeTestInstance[]
 }
 
-
 export type Queries = GetByAPI
+
+export type ReactThreeTestInstance = ReactThreeTest.ReactThreeTestInstance

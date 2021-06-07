@@ -1,4 +1,4 @@
-import { ReactThreeTestInstance } from '../types/internal'
+import { ReactThreeTestInstance } from 'types/internal'
 
 import { PrimitiveTypeError } from './errors'
 

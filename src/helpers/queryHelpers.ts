@@ -1,4 +1,4 @@
-import { ReactThreeTestInstance } from './../types/internal'
+import { ReactThreeTestInstance } from './types/internal'
 
 import { getMultipleElementsFoundError } from './errors'
 import { findAll } from './find'

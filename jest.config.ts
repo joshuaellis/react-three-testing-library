@@ -1,25 +1,21 @@
-const config = {
-  preset: 'ts-jest',
-  testEnvironment: 'jsdom',
-  testPathIgnorePatterns: ['/node_modules/'],
-  moduleDirectories: ['node_modules', 'src'],
-  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
-  transform: {
-    '^.+\\.(ts|tsx)?$': 'ts-jest',
-    '^.+\\.(js|jsx)$': 'babel-jest'
-  },
-  setupFilesAfterEnv: ['./tests/setup-env.ts'],
-  coveragePathIgnorePatterns: ['<rootDir>/node_modules/'],
-  coverageThreshold: {
-    global: {
-      statements: 100,
-      branches: 100,
-      functions: 100,
-      lines: 100
-    }
-  },
-  coverageDirectory: './coverage/',
-  collectCoverage: true
-}
+const path = require('path')
+const { pathsToModuleNameMapper } = require('ts-jest/utils')
+const { compilerOptions } = require('./tsconfig.json')
+const moduleNameMapper = pathsToModuleNameMapper(compilerOptions.paths, {
+  prefix: '<rootDir>/',
+})
 
-export default config
+export default {
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  testPathIgnorePatterns: ['<rootDir>/node_modules/'],
+  modulePathIgnorePatterns: ['dist'],
+  moduleNameMapper,
+  globals: {
+    'ts-jest': {
+      isolatedModules: true,
+    },
+  },
+  setupFilesAfterEnv: [path.join(__dirname, './test/setup-env.ts')],
+  moduleFileExtensions: ['js', 'ts', 'tsx'],
+}

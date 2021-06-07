@@ -1,4 +1,4 @@
-import { ReactThreeTestInstance } from '../types/internal'
+import { ReactThreeTestInstance } from 'types/internal'
 
 import { getMultipleElementsFoundError } from './errors'
 
@@ -9,7 +9,7 @@ const findAll = (
   let results: ReactThreeTestInstance[] = []
 
   const res = node.findAll((node) => {
-   console.log(node.children)
+    console.log(node.children)
     // if(node.props.renderer && node.props.container){
     //   console.log(node.children)
     // }
@@ -17,7 +17,7 @@ const findAll = (
     return false
   })
 
-  console.log('RES',res)
+  console.log('RES', res)
 
   // if (checker(node)) {
   //   results.push(node)

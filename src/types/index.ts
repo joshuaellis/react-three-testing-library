@@ -1,4 +1,8 @@
-import { ReactThreeTestInstance, TestHarnessCanvasProps, Queries } from './internal'
+import {
+  ReactThreeTestInstance,
+  TestHarnessCanvasProps,
+  Queries,
+} from './internal'
 
 export type RenderSceneResult = {
   scene: ReactThreeTestInstance

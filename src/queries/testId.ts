@@ -1,4 +1,4 @@
-import { queryAllByProp, buildQueries } from '../helpers/queryHelpers'
+import { queryAllByProp, buildQueries } from 'helpers/queryHelpers'
 
 const TYPE = 'testid'
 const PROP = `data-${TYPE}`

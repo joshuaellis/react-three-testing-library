@@ -1,8 +1,13 @@
 import * as React from 'react'
-import ReactThreeTestRenderer from 'react-three-test-renderer'
+import ReactThreeTestRenderer, {
+  ReactThreeTest,
+} from '@react-three/test-renderer'
 
-const renderScene = (el: React.ReactNode) => {
-  return ReactThreeTestRenderer.create(el)
+const renderScene = async (
+  el: React.ReactNode,
+  opts?: Partial<ReactThreeTest.CreateOptions>
+) => {
+  return await ReactThreeTestRenderer.create(el, opts)
 }
 
 export { renderScene }

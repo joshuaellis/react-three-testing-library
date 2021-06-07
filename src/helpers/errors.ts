@@ -10,7 +10,7 @@ const getMultipleElementsFoundError = (message: string): Error =>
   )
 
 class PrimitiveTypeError<Matcher extends () => void> extends Error {
-  constructor (
+  constructor(
     received: ReactThreeTestInstance,
     types: string[],
     matcherFn: Matcher,
@@ -35,7 +35,7 @@ class PrimitiveTypeError<Matcher extends () => void> extends Error {
       `${context.utils.RECEIVED_COLOR(
         'received'
       )} value must be of the following:${types.map((t) => `\n- ${t}`)}`,
-      withType
+      withType,
     ].join('\n')
   }
 }
