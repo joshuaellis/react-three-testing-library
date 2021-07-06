@@ -11,10 +11,7 @@ const renderScene = async (
   el: React.ReactNode,
   { glProps }: RenderSceneOpts = {}
 ): Promise<RenderSceneResult> => {
-  const { scene, fireEvent, advanceFrames, unmount, update } = await create(
-    el,
-    glProps
-  )
+  const { scene, fireEvent, advanceFrames, unmount } = await create(el, glProps)
 
   return {
     scene,
