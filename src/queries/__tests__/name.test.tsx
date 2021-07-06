@@ -1,22 +1,20 @@
-jest.mock('scheduler', () => require('scheduler/unstable_mock'))
-
 import * as React from 'react'
 
 import { renderScene } from '../../index'
 
-describe('testId queries', () => {
-  describe('getTestById', () => {
-    const TestScene = () => (
+describe('name queries', () => {
+  const TestScene = () => (
+    <mesh>
+      <boxBufferGeometry name="my-geometry" args={[1, 1, 1]} />
+      <meshBasicMaterial />
       <mesh>
         <boxBufferGeometry name="my-geometry" args={[1, 1, 1]} />
-        <meshBasicMaterial />
-        <mesh>
-          <boxBufferGeometry name="my-geometry" args={[1, 1, 1]} />
-          <meshBasicMaterial name="my-material" />
-        </mesh>
+        <meshBasicMaterial name="my-material" />
       </mesh>
-    )
+    </mesh>
+  )
 
+  describe('getByName', () => {
     it('should find the meshBasicMaterial', async () => {
       const { getByName } = await renderScene(<TestScene />)
 
@@ -38,6 +36,20 @@ describe('testId queries', () => {
         'Found multiple elements with the name of: my-geometry\n\n(If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByName`)).'
 
       expect(res).toThrowError(new Error(expectedMessage))
+    })
+  })
+
+  describe('getAllByName', () => {
+    it('should find the geometries', async () => {
+      const { getAllByName } = await renderScene(<TestScene />)
+
+      expect(getAllByName('my-geometry')).not.toEqual([])
+    })
+
+    it("should return [] if it can't find anything", async () => {
+      const { getAllByName } = await renderScene(<TestScene />)
+
+      expect(getAllByName('my-mesh')).toEqual([])
     })
   })
 })

@@ -6,8 +6,12 @@ const queryAllByProp = (prop: string) => (
   sceneTree: ReactThreeTestInstance
 ) => (id: string) => Array.from(sceneTree.findAllByProps({ [prop]: id }))
 
+const queryAllByType = () => (sceneTree: ReactThreeTestInstance) => (
+  type: string
+) => Array.from(sceneTree.findAllByType(type))
+
 const buildQueries = (
-  queryAllBy: ReturnType<typeof queryAllByProp>,
+  queryAllBy: ReturnType<typeof queryAllByProp | typeof queryAllByType>,
   getMultipleError: (id: string) => string
 ) => {
   const queryBy = makeSingleQuery(queryAllBy, getMultipleError)
@@ -28,4 +32,4 @@ const makeSingleQuery = (
   return els[0] ?? null
 }
 
-export { buildQueries, makeSingleQuery, queryAllByProp }
+export { buildQueries, makeSingleQuery, queryAllByProp, queryAllByType }

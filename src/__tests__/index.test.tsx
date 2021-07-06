@@ -4,10 +4,10 @@ import { Vector3 } from 'three'
 import { renderScene } from '../index'
 
 describe('react-three-testing-library', () => {
-  it('should render a scene', () => {
+  it('should render a scene', async () => {
     const position = new Vector3(1, 1, 1)
 
-    const { scene } = renderScene(
+    const { scene } = await renderScene(
       <mesh position={position}>
         <boxBufferGeometry args={[1, 1, 1]} />
         <meshBasicMaterial />
