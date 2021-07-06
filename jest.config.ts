@@ -7,7 +7,7 @@ const moduleNameMapper = pathsToModuleNameMapper(compilerOptions.paths, {
 
 export default {
   preset: 'ts-jest',
-  testEnvironment: 'node',
+  testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['<rootDir>/node_modules/'],
   modulePathIgnorePatterns: ['dist'],
   moduleNameMapper,
@@ -16,6 +16,6 @@ export default {
       isolatedModules: true,
     },
   },
-  setupFilesAfterEnv: [path.join(__dirname, './test/setup-env.ts')],
+  setupFilesAfterEnv: [path.join(__dirname, './tests/setup-env.ts')],
   moduleFileExtensions: ['js', 'ts', 'tsx'],
 }

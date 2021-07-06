@@ -1,18 +1,10 @@
-import { ReactThreeTestInstance } from './types/internal'
+import { ReactThreeTestInstance } from '../types/internal'
 
 import { getMultipleElementsFoundError } from './errors'
-import { findAll } from './find'
 
 const queryAllByProp = (prop: string) => (
   sceneTree: ReactThreeTestInstance
-) => (id: string) => {
-  return Array.from(
-    findAll(
-      sceneTree,
-      (node: ReactThreeTestInstance) => node.props[prop] === id
-    )
-  )
-}
+) => (id: string) => Array.from(sceneTree.findAllByProps({ [prop]: id }))
 
 const buildQueries = (
   queryAllBy: ReturnType<typeof queryAllByProp>,

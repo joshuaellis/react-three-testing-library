@@ -6,7 +6,7 @@ const getElementError = (message: string): Error => {
 
 const getMultipleElementsFoundError = (message: string): Error =>
   getElementError(
-    `${message}\n\n(If this is intentional, then use the \`*AllBy*\` variant of the query (like \`queryAllByText\`, \`getAllByText\`, or \`findAllByText\`)).`
+    `${message}\n\n(If this is intentional, then use the \`*AllBy*\` variant of the query (like \`queryAllByName\`)).`
   )
 
 class PrimitiveTypeError<Matcher extends () => void> extends Error {
