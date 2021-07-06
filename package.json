@@ -51,7 +51,7 @@
     "@commitlint/config-conventional": "^12.1.4",
     "@react-three/fiber": "^7.0.3",
     "@react-three/test-renderer": "^7.0.3",
-    "@studiocompanion/scripts": "^1.0.1",
+    "@studiocompanion/scripts": "^1.1.0",
     "@types/jest": "^26.0.23",
     "@types/react": "^17.0.3",
     "@types/react-test-renderer": "^17.0.1",

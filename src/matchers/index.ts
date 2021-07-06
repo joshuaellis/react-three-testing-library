@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-namespace */
 import { toBeType } from './toBeType'
 import { toHaveMaterial } from './toHaveMaterial'
 

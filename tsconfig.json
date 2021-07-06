@@ -27,5 +27,5 @@
       "types/*": ["src/types/*"]
     }
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "babel.config.js", "jest.config.ts", "tests/*"]
 }

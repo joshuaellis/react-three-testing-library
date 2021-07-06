@@ -7,7 +7,7 @@ const findProp = (
   prop: string,
   expectedValue?: string
 ) => {
-  let regexp = new RegExp(prop)
+  const regexp = new RegExp(prop)
   let result = expectedValue
     ? node.props[prop] === expectedValue
     : Boolean(node.props[prop])

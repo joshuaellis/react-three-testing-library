@@ -1564,10 +1564,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@studiocompanion/eslint-config@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@studiocompanion/eslint-config/-/eslint-config-1.0.1.tgz#3f412c0d1a418382a38bad5b7dfc1c8c5e0ab992"
-  integrity sha512-vChWFq2RVcNTkZktlN5N0Q4GHb/ScfejUEUxV5kk3BzGo/z3monVnN+l/R2GtACGftjr2QeyIofXzSfqLBka6A==
+"@studiocompanion/eslint-config@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@studiocompanion/eslint-config/-/eslint-config-1.1.0.tgz#0baba3acb18f43498878aa838928838b62df3909"
+  integrity sha512-xGymMERtZtnGF8QKIzXObYtbXKLcyfAS8+5ehOQBcCl9cytLTO8b2q1d2G5R+GZxqRnEEnNe0URVqHlNOaecnw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.22.0"
     "@typescript-eslint/parser" "^4.22.0"
@@ -1578,18 +1578,18 @@
     eslint-plugin-react-hooks "^4.2.0"
     prettier "^2.2.1"
 
-"@studiocompanion/prettier@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@studiocompanion/prettier/-/prettier-1.0.1.tgz#b89923959027b48e9eacc36ae51d19ddc19f9c9b"
-  integrity sha512-WAxpTYouyuN8BGFuFtClJLd0V8U6py2XKMORJGgzGsqOuXafQAWnHrXkglD1lYZgAMeuLLknjSoA72vjM7NRxw==
+"@studiocompanion/prettier@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@studiocompanion/prettier/-/prettier-1.1.0.tgz#837550aa164250a684ab953eb8bc185ee850bd31"
+  integrity sha512-QgzeJ+LkufBhNmxrtYlpl/ShDdi7fNGbLsUxlw2w37bB0T7cMPiNOJQgXhCE33zPJQZuLQnqr4i99Qp1A3Pk4g==
 
-"@studiocompanion/scripts@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@studiocompanion/scripts/-/scripts-1.0.1.tgz#10252f5c6d4ed20f8f94f3dea8b6abc44037fdff"
-  integrity sha512-/LjF5SqYuH/tCyGB5XwdbKexWojGhnukKQV1+vAfTF7kHnWKf/xwIp0vzW8xusUJ/cbdhJbr7HYHfMmmUjSUng==
+"@studiocompanion/scripts@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@studiocompanion/scripts/-/scripts-1.1.0.tgz#504277de3dc95e9415add4c36237f07b6271634e"
+  integrity sha512-FBoP5YvG2j+aFJdwoYaCZXwuUsMLXL01fQxeTDPyJSZP3tELUp1uoYuvs4gdPrWPa2Ffx7i8uIOGGHnjn7i+Bw==
   dependencies:
-    "@studiocompanion/eslint-config" "^1.0.1"
-    "@studiocompanion/prettier" "^1.0.1"
+    "@studiocompanion/eslint-config" "^1.1.0"
+    "@studiocompanion/prettier" "^1.1.0"
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.7":
   version "7.1.12"

@@ -1,4 +1,7 @@
 {
   "extends": "@studiocompanion/eslint-config",
-  "ignorePatterns": ["dist"]
+  "ignorePatterns": ["dist"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
 }

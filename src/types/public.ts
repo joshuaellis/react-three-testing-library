@@ -5,7 +5,7 @@ export type RenderSceneResult = Pick<
   ReactThreeTest.Renderer,
   'scene' | 'unmount' | 'fireEvent' | 'advanceFrames'
 > &
-  Queries & {}
+  Queries
 
 export type RenderSceneOpts = {
   glProps?: Partial<ReactThreeTest.CreateOptions>
