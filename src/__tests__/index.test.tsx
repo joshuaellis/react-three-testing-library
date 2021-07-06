@@ -20,4 +20,23 @@ describe('react-three-testing-library', () => {
 
     expect(scene).toBeTruthy()
   })
+
+  it('should unmount my scene', async () => {
+    const { unmount, scene } = await renderScene(
+      <mesh>
+        <boxBufferGeometry args={[1, 1, 1]} />
+        <meshBasicMaterial />
+        <mesh>
+          <boxBufferGeometry args={[1, 1, 1]} />
+          <meshBasicMaterial />
+        </mesh>
+      </mesh>
+    )
+
+    expect(scene.children).toHaveLength(1)
+
+    await unmount()
+
+    expect(scene.children).toHaveLength(0)
+  })
 })
