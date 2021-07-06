@@ -1,23 +1,20 @@
 import * as React from 'react'
-import ReactThreeTestRenderer, {
-  ReactThreeTest,
-} from '@react-three/test-renderer'
+import ReactThreeTestRenderer from '@react-three/test-renderer'
 
 import { getQueriesForScene } from 'helpers/getQueriesForScene'
 
-import { RenderSceneResult } from 'types/public'
+import { RenderSceneOpts, RenderSceneResult } from 'types/public'
+
+const { create, act } = ReactThreeTestRenderer
 
 const renderScene = async (
   el: React.ReactNode,
-  opts?: Partial<ReactThreeTest.CreateOptions>
+  { glProps }: RenderSceneOpts = {}
 ): Promise<RenderSceneResult> => {
-  const {
-    scene,
-    fireEvent,
-    advanceFrames,
-    unmount,
-    update,
-  } = await ReactThreeTestRenderer.create(el, opts)
+  const { scene, fireEvent, advanceFrames, unmount, update } = await create(
+    el,
+    glProps
+  )
 
   return {
     scene,
@@ -28,4 +25,4 @@ const renderScene = async (
   }
 }
 
-export { renderScene }
+export { renderScene, act }
