@@ -49,7 +49,7 @@
     "@babel/preset-typescript": "^7.14.5",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
-    "@react-three/fiber": "^7.0.4",
+    "@react-three/fiber": "^7.0.5",
     "@react-three/test-renderer": "^7.0.4",
     "@studiocompanion/scripts": "^1.1.0",
     "@types/jest": "^26.0.24",
