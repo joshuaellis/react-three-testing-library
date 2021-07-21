@@ -1420,10 +1420,10 @@
     utility-types "^3.10.0"
     zustand "^3.5.1"
 
-"@react-three/test-renderer@^7.0.4":
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/@react-three/test-renderer/-/test-renderer-7.0.4.tgz#6fbeec40d219d9240ba239b57aa46d171ff956af"
-  integrity sha512-9eJMlsMVQis51hBczNA1PA2sfBPmm0Pa/aFhNyPfybugLBJt8e4/xmZ9FDj25Wm6QOU+9L3PREaU+qZ2A5wq8Q==
+"@react-three/test-renderer@^7.0.6":
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/@react-three/test-renderer/-/test-renderer-7.0.6.tgz#32b4b3c114dd0d53307d432106754560817b096c"
+  integrity sha512-MDROOyPbei+qE+LkLZJitJHas4RFr9m1vjmR8Bwa7qSbPbwZQW+4U1G77drOxuhU/PnEOxTsqE7phukbPrHLuQ==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.2"
