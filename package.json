@@ -53,7 +53,7 @@
     "@react-three/test-renderer": "^7.0.6",
     "@studiocompanion/scripts": "^1.1.0",
     "@types/jest": "^27.0.0",
-    "@types/react": "^17.0.17",
+    "@types/react": "^17.0.27",
     "@types/react-test-renderer": "^17.0.1",
     "@types/three": "^0.131.0",
     "babel-jest": "^27.0.6",
